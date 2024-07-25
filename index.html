@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .music-player {
+            background: linear-gradient(145deg, #f7b6b6, #ffd9d9);
+            box-shadow: 20px 20px 60px #f1a1a1, -20px -20px 60px #ffe7e7;
+        }
+        .controls i {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="music-player p-6 rounded-3xl text-center w-80">
+        <div class="flex justify-between items-center mb-4">
+            <button><i class="fas fa-chevron-left text-xl"></i></button>
+            <button><i class="fas fa-bars text-xl"></i></button>
+        </div>
+        <div class="mb-4">
+            <img class="w-40 h-40 rounded-full mx-auto" src="./468-thumbnail.png" alt="Song Image">
+        </div>
+        <h3 class="text-xl font-semibold">Despacito</h3>
+        <p class="text-gray-600">Luis Fonsi Ft. Puerto Rican</p>
+        <div class="my-4">
+            <input type="range" class="w-full" min="0" max="100" value="50">
+        </div>
+        <div class="flex justify-around items-center controls">
+            <button id="prev"><i class="fas fa-backward"></i></button>
+            <button id="play" class="bg-pink-500 text-white p-4 rounded-full"><i class="fas fa-play"></i></button>
+            <button id="next"><i class="fas fa-forward"></i></button>
+        </div>
+    </div>
+    <audio id="audio" src="./Luis Fonsi - Despacito ft. Daddy Yankee.mp3"></audio>
+    <script src="index.js"></script>
+</body>
+</html>
